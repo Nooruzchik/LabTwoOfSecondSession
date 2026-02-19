@@ -8,12 +8,12 @@ namespace LabTwoOfSecondSession.Model.Enums
 {
     public enum Weekday
     {
-        Monday,
-        Tuesday,
-        Wednesday,
-        Thursday,
-        Friday,
-        Saturday,
-        Sunday
+        Monday = 1,// явное значение
+        Tuesday = 2 ,
+        Wednesday = 3,
+        Thursday = 4,
+        Friday = 5,
+        Saturday = 6,
+        Sunday = 7
     }
 }

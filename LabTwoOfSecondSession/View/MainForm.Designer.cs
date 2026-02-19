@@ -33,9 +33,9 @@ namespace LabTwoOfSecondSession
         {
             tabPage1 = new TabPage();
             groupBox2 = new GroupBox();
-            label5 = new Label();
+            replaceToInt = new Label();
             btnForParse = new Button();
-            textBox2 = new TextBox();
+            textBoxForWeek = new TextBox();
             label4 = new Label();
             groupBox1 = new GroupBox();
             label3 = new Label();
@@ -65,9 +65,9 @@ namespace LabTwoOfSecondSession
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(label5);
+            groupBox2.Controls.Add(replaceToInt);
             groupBox2.Controls.Add(btnForParse);
-            groupBox2.Controls.Add(textBox2);
+            groupBox2.Controls.Add(textBoxForWeek);
             groupBox2.Controls.Add(label4);
             groupBox2.Location = new Point(3, 392);
             groupBox2.Name = "groupBox2";
@@ -76,16 +76,16 @@ namespace LabTwoOfSecondSession
             groupBox2.TabStop = false;
             groupBox2.Text = "Weekday Parsing";
             // 
-            // label5
+            // replaceToInt
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label5.ForeColor = SystemColors.ControlDarkDark;
-            label5.Location = new Point(16, 129);
-            label5.Name = "label5";
-            label5.Size = new Size(177, 20);
-            label5.TabIndex = 9;
-            label5.Text = "Напишите день недели";
+            replaceToInt.AutoSize = true;
+            replaceToInt.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            replaceToInt.ForeColor = SystemColors.ControlDarkDark;
+            replaceToInt.Location = new Point(16, 129);
+            replaceToInt.Name = "replaceToInt";
+            replaceToInt.Size = new Size(177, 20);
+            replaceToInt.TabIndex = 9;
+            replaceToInt.Text = "Напишите день недели";
             // 
             // btnForParse
             // 
@@ -96,13 +96,14 @@ namespace LabTwoOfSecondSession
             btnForParse.Text = "Parse";
             btnForParse.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // textBoxForWeek
             // 
-            textBox2.Location = new Point(16, 79);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(323, 34);
-            textBox2.TabIndex = 7;
+            textBoxForWeek.Location = new Point(16, 79);
+            textBoxForWeek.Multiline = true;
+            textBoxForWeek.Name = "textBoxForWeek";
+            textBoxForWeek.Size = new Size(323, 34);
+            textBoxForWeek.TabIndex = 7;
+            textBoxForWeek.TextChanged += textBoxWeek_Changed;
             // 
             // label4
             // 
@@ -222,9 +223,9 @@ namespace LabTwoOfSecondSession
         private Label label3;
         private Label label2;
         private Label label1;
-        private Label label5;
+        private Label replaceToInt;
         private Button btnForParse;
-        private TextBox textBox2;
+        private TextBox textBoxForWeek;
         private Label label4;
     }
 }

@@ -50,9 +50,14 @@ namespace LabTwoOfSecondSession
             var selectedValue = ValuesListBox.SelectedItem;
             if (selectedValue != null)
             {
-                int numericValue = (int)selectedValue + 1; // явное преобразование
+                int numericValue = (int)selectedValue; // явное преобразование
                 intValueReturn.Text = numericValue.ToString();
             }
+        }
+
+        private void textBoxWeek_Changed(object sender, EventArgs e)
+        {
+            
         }
     }
 }
