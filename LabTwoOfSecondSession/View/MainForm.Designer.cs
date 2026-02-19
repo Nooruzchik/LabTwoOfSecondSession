@@ -189,20 +189,16 @@ namespace LabTwoOfSecondSession
             Enums.SelectedIndex = 0;
             Enums.Size = new Size(872, 629);
             Enums.TabIndex = 0;
-
-
-            //
+            // 
             // MainForm
             // 
-
-            Name = "MainForm";
-            Text = "Form1";
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(872, 629);
             Controls.Add(Enums);
+            Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-
+            Text = "Form1";
             tabPage1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();

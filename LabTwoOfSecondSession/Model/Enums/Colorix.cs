@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LabTwoOfSecondSession.Model.Enums
 {
-    public enum Color
+    public enum Colorix
     {
         Red,
         Blue,
