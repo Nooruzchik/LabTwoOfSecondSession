@@ -43,7 +43,7 @@ namespace LabTwoOfSecondSession
             label1 = new Label();
             ValuesListBox = new ListBox();
             EnumsListBox = new ListBox();
-            textBox1 = new TextBox();
+            intValueReturn = new TextBox();
             Enums = new TabControl();
             tabPage1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -120,7 +120,7 @@ namespace LabTwoOfSecondSession
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(ValuesListBox);
             groupBox1.Controls.Add(EnumsListBox);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(intValueReturn);
             groupBox1.Dock = DockStyle.Top;
             groupBox1.Location = new Point(3, 3);
             groupBox1.Name = "groupBox1";
@@ -163,6 +163,7 @@ namespace LabTwoOfSecondSession
             ValuesListBox.Name = "ValuesListBox";
             ValuesListBox.Size = new Size(200, 304);
             ValuesListBox.TabIndex = 1;
+            ValuesListBox.SelectedIndexChanged += ValueListBox_Changed;
             // 
             // EnumsListBox
             // 
@@ -171,14 +172,15 @@ namespace LabTwoOfSecondSession
             EnumsListBox.Name = "EnumsListBox";
             EnumsListBox.Size = new Size(207, 304);
             EnumsListBox.TabIndex = 0;
+            EnumsListBox.SelectedIndexChanged += EnumsListBox_Changed;
             // 
-            // textBox1
+            // intValueReturn
             // 
-            textBox1.Location = new Point(508, 61);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(184, 34);
-            textBox1.TabIndex = 2;
+            intValueReturn.Location = new Point(508, 61);
+            intValueReturn.Multiline = true;
+            intValueReturn.Name = "intValueReturn";
+            intValueReturn.Size = new Size(184, 34);
+            intValueReturn.TabIndex = 2;
             // 
             // Enums
             // 
@@ -211,7 +213,7 @@ namespace LabTwoOfSecondSession
         #endregion
 
         private TabPage tabPage1;
-        private TextBox textBox1;
+        private TextBox intValueReturn;
         private ListBox ValuesListBox;
         private ListBox EnumsListBox;
         private TabControl Enums;

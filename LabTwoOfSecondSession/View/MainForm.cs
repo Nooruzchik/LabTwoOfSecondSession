@@ -1,5 +1,6 @@
-using System.Windows.Forms;
 using LabTwoOfSecondSession.Model.Enums;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LabTwoOfSecondSession
 {
@@ -10,15 +11,48 @@ namespace LabTwoOfSecondSession
             InitializeComponent();
             this.Load += MainForm_Load;
         }
-
+        /// <summary>
+        /// выводит все наши перечисления в EnumsListBox
+        /// </summary>
         private void MainForm_Load(object sender, EventArgs e)
         {
-            EnumsListBox.Items.Add(typeof(Colorix).Name);
-            EnumsListBox.Items.Add(typeof(Weekday).Name);
-            EnumsListBox.Items.Add(typeof(EducationForm).Name);
-            EnumsListBox.Items.Add(typeof(Manufacture).Name);
-            EnumsListBox.Items.Add(typeof(Genre).Name);
-            EnumsListBox.Items.Add(typeof(Season).Name);
+            EnumsListBox.DisplayMember = "Name"; // выводит только имена перечислений вместо значений
+            EnumsListBox.Items.Add(typeof(Colorix)); // вывод перечисления в EnumsListBox
+            EnumsListBox.Items.Add(typeof(Weekday));
+            EnumsListBox.Items.Add(typeof(EducationForm));
+            EnumsListBox.Items.Add(typeof(Manufacture));
+            EnumsListBox.Items.Add(typeof(Genre));
+            EnumsListBox.Items.Add(typeof(Season));
+        }
+
+        /// <summary>
+        /// вывод значений из пречислений во второй список ValuesListBox
+        /// </summary>
+        private void EnumsListBox_Changed(object sender, EventArgs e)
+        {
+            Type selectedEnum = EnumsListBox.SelectedItem as Type; // выбор из списака EnumsListBox
+
+            if (selectedEnum != null) // проверка на выбор
+            {
+                Array enumValues = Enum.GetValues(selectedEnum); // создание списка для сохранения значений перечислений
+                ValuesListBox.Items.Clear(); // очистка списка значений
+                foreach (var value in enumValues)
+                {
+                    ValuesListBox.Items.Add(value); // вывод значений в ValuesListBox
+                }
+            }
+        }
+        /// <summary>
+        /// вывод числового значения соответсвующего значения
+        /// </summary>
+        private void ValueListBox_Changed(object sender, EventArgs e)
+        {
+            var selectedValue = ValuesListBox.SelectedItem;
+            if (selectedValue != null)
+            {
+                int numericValue = (int)selectedValue + 1; // явное преобразование
+                intValueReturn.Text = numericValue.ToString();
+            }
         }
     }
 }
