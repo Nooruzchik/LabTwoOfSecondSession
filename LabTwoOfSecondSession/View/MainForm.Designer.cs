@@ -34,7 +34,7 @@ namespace LabTwoOfSecondSession
             tabPage1 = new TabPage();
             groupBox2 = new GroupBox();
             replaceToInt = new Label();
-            btnForParse = new Button();
+            btnParse = new Button();
             textBoxForWeek = new TextBox();
             label4 = new Label();
             groupBox1 = new GroupBox();
@@ -66,7 +66,7 @@ namespace LabTwoOfSecondSession
             // groupBox2
             // 
             groupBox2.Controls.Add(replaceToInt);
-            groupBox2.Controls.Add(btnForParse);
+            groupBox2.Controls.Add(btnParse);
             groupBox2.Controls.Add(textBoxForWeek);
             groupBox2.Controls.Add(label4);
             groupBox2.Location = new Point(3, 392);
@@ -87,14 +87,15 @@ namespace LabTwoOfSecondSession
             replaceToInt.TabIndex = 9;
             replaceToInt.Text = "Напишите день недели";
             // 
-            // btnForParse
+            // btnParse
             // 
-            btnForParse.Location = new Point(374, 79);
-            btnForParse.Name = "btnForParse";
-            btnForParse.Size = new Size(131, 34);
-            btnForParse.TabIndex = 8;
-            btnForParse.Text = "Parse";
-            btnForParse.UseVisualStyleBackColor = true;
+            btnParse.Location = new Point(374, 79);
+            btnParse.Name = "btnParse";
+            btnParse.Size = new Size(131, 34);
+            btnParse.TabIndex = 8;
+            btnParse.Text = "Parse";
+            btnParse.UseVisualStyleBackColor = true;
+            btnParse.MouseClick += buttonParse_Click;
             // 
             // textBoxForWeek
             // 
@@ -103,7 +104,6 @@ namespace LabTwoOfSecondSession
             textBoxForWeek.Name = "textBoxForWeek";
             textBoxForWeek.Size = new Size(323, 34);
             textBoxForWeek.TabIndex = 7;
-            textBoxForWeek.TextChanged += textBoxWeek_Changed;
             // 
             // label4
             // 
@@ -224,7 +224,7 @@ namespace LabTwoOfSecondSession
         private Label label2;
         private Label label1;
         private Label replaceToInt;
-        private Button btnForParse;
+        private Button btnParse;
         private TextBox textBoxForWeek;
         private Label label4;
     }
