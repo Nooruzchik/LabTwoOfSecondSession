@@ -55,21 +55,59 @@ namespace LabTwoOfSecondSession
             }
         }
 
+        //private void buttonParse_Click(object sender, MouseEventArgs e)
+        //{
+        //    string userText = textBoxForWeek.Text;
+
+        //    Weekday parseDay;
+
+        //    bool parseSuccsesful = Enum.TryParse<Weekday>(userText, ignoreCase: true, out parseDay);
+
+        //    if (parseSuccsesful)
+        //    {
+        //        int numberOfDay = (int)parseDay;
+
+        //        replaceToInt.Text = $"Это день недели ({textBoxForWeek.Text} = {numberOfDay})";
+        //    }
+
+        //    else
+        //    {
+        //        replaceToInt.Text = "Нет такого дня недели";
+        //    }
+        //}
+
         private void buttonParse_Click(object sender, MouseEventArgs e)
         {
             string userText = textBoxForWeek.Text;
 
             Weekday parseDay;
 
+            
             bool parseSuccsesful = Enum.TryParse<Weekday>(userText, ignoreCase: true, out parseDay);
 
             if (parseSuccsesful)
             {
-                int numberOfDay = (int)parseDay;
+                
+                bool isNumber = true;
+                foreach (char c in userText)
+                {
+                    if (!char.IsDigit(c))
+                    {
+                        isNumber = false;
+                        break;
+                    }
+                }
 
-                replaceToInt.Text = $"Это день недели ({textBoxForWeek.Text} = {numberOfDay})";
+                if (isNumber)
+                {
+                    replaceToInt.Text = "Нет такого дня недели";
+                }
+                else
+                {
+                    int numberOfDay = (int)parseDay;
+                    replaceToInt.Text = $"Это день недели ({parseDay} = {numberOfDay})";
+                }
             }
-
             else
             {
                 replaceToInt.Text = "Нет такого дня недели";
