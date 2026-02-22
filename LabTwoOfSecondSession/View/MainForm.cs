@@ -13,7 +13,7 @@ namespace LabTwoOfSecondSession
 
             seasonComboBox.DataSource = Enum.GetValues(typeof(Season)); // выводит значания Season в comboBox
 
-            
+
 
         }
         /// <summary>
@@ -119,8 +119,32 @@ namespace LabTwoOfSecondSession
             }
         }
 
-        
+        private void goButton_click(object sender, EventArgs e)
+        {
+            Season selectedSeason = (Season)seasonComboBox.SelectedItem;
 
-        
+            switch (selectedSeason)
+            {
+                case Season.winter: 
+                    this.BackColor = Color.FromArgb(80, 152, 215);
+                    MessageBox.Show("Бррр! Холодно!", "Время года", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    break;
+                case Season.spring:
+                    this.BackColor = Color.FromArgb(85, 156, 69); 
+                    break;
+                case Season.summer:
+                    this.BackColor = Color.FromArgb(236, 228, 61);
+                    MessageBox.Show("Ура! Каникулы!", "Время года", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                
+                case Season.autumn:                      
+                    this.BackColor = Color.FromArgb(226,156, 59);
+                    MessageBox.Show("Пора батрачить в универе", "Время года", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                default:
+                    MessageBox.Show("Что-то пошло не так");
+                    break;
+            }
+        }
     }
 }

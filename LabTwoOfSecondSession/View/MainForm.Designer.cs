@@ -99,6 +99,7 @@ namespace LabTwoOfSecondSession
             goButton.TabIndex = 1;
             goButton.Text = "Go!";
             goButton.UseVisualStyleBackColor = true;
+            goButton.Click += goButton_click;
             // 
             // seasonComboBox
             // 
