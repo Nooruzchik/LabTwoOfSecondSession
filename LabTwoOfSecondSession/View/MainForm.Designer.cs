@@ -32,6 +32,10 @@ namespace LabTwoOfSecondSession
         private void InitializeComponent()
         {
             tabPage1 = new TabPage();
+            groupBox3 = new GroupBox();
+            label5 = new Label();
+            goButton = new Button();
+            seasonComboBox = new ComboBox();
             groupBox2 = new GroupBox();
             replaceToInt = new Label();
             btnParse = new Button();
@@ -45,15 +49,11 @@ namespace LabTwoOfSecondSession
             EnumsListBox = new ListBox();
             intValueReturn = new TextBox();
             Enums = new TabControl();
-            groupBox3 = new GroupBox();
-            comboBox1 = new ComboBox();
-            button1 = new Button();
-            label5 = new Label();
             tabPage1.SuspendLayout();
+            groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             Enums.SuspendLayout();
-            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // tabPage1
@@ -68,6 +68,45 @@ namespace LabTwoOfSecondSession
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Enums";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(label5);
+            groupBox3.Controls.Add(goButton);
+            groupBox3.Controls.Add(seasonComboBox);
+            groupBox3.Dock = DockStyle.Right;
+            groupBox3.Location = new Point(448, 386);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(413, 207);
+            groupBox3.TabIndex = 5;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "groupBox3";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(19, 39);
+            label5.Name = "label5";
+            label5.Size = new Size(109, 20);
+            label5.TabIndex = 2;
+            label5.Text = "Choose Season";
+            // 
+            // goButton
+            // 
+            goButton.Location = new Point(232, 78);
+            goButton.Name = "goButton";
+            goButton.Size = new Size(94, 28);
+            goButton.TabIndex = 1;
+            goButton.Text = "Go!";
+            goButton.UseVisualStyleBackColor = true;
+            // 
+            // seasonComboBox
+            // 
+            seasonComboBox.FormattingEnabled = true;
+            seasonComboBox.Location = new Point(20, 79);
+            seasonComboBox.Name = "seasonComboBox";
+            seasonComboBox.Size = new Size(206, 28);
+            seasonComboBox.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -200,45 +239,6 @@ namespace LabTwoOfSecondSession
             Enums.Size = new Size(872, 629);
             Enums.TabIndex = 0;
             // 
-            // groupBox3
-            // 
-            groupBox3.Controls.Add(label5);
-            groupBox3.Controls.Add(button1);
-            groupBox3.Controls.Add(comboBox1);
-            groupBox3.Dock = DockStyle.Right;
-            groupBox3.Location = new Point(448, 386);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(413, 207);
-            groupBox3.TabIndex = 5;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "groupBox3";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(20, 79);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(206, 28);
-            comboBox1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(232, 78);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 28);
-            button1.TabIndex = 1;
-            button1.Text = "Go!";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(19, 39);
-            label5.Name = "label5";
-            label5.Size = new Size(109, 20);
-            label5.TabIndex = 2;
-            label5.Text = "Choose Season";
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -249,13 +249,13 @@ namespace LabTwoOfSecondSession
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             tabPage1.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             Enums.ResumeLayout(false);
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -277,7 +277,7 @@ namespace LabTwoOfSecondSession
         private Label label4;
         private GroupBox groupBox3;
         private Label label5;
-        private Button button1;
-        private ComboBox comboBox1;
+        private Button goButton;
+        private ComboBox seasonComboBox;
     }
 }

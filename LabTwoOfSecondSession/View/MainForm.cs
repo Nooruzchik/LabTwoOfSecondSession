@@ -10,6 +10,11 @@ namespace LabTwoOfSecondSession
         {
             InitializeComponent();
             this.Load += MainForm_Load;
+
+            seasonComboBox.DataSource = Enum.GetValues(typeof(Season)); // выводит значания Season в comboBox
+
+            
+
         }
         /// <summary>
         /// выводит все наши перечисления в EnumsListBox
@@ -114,7 +119,7 @@ namespace LabTwoOfSecondSession
             }
         }
 
-       
+        
 
         
     }
