@@ -82,12 +82,12 @@ namespace LabTwoOfSecondSession
 
             Weekday parseDay;
 
-            
+
             bool parseSuccsesful = Enum.TryParse<Weekday>(userText, ignoreCase: true, out parseDay);
 
             if (parseSuccsesful)
             {
-                
+
                 bool isNumber = true;
                 foreach (char c in userText)
                 {
@@ -113,5 +113,9 @@ namespace LabTwoOfSecondSession
                 replaceToInt.Text = "Нет такого дня недели";
             }
         }
+
+       
+
+        
     }
 }

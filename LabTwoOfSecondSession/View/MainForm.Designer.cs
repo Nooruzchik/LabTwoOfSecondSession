@@ -45,14 +45,20 @@ namespace LabTwoOfSecondSession
             EnumsListBox = new ListBox();
             intValueReturn = new TextBox();
             Enums = new TabControl();
+            groupBox3 = new GroupBox();
+            comboBox1 = new ComboBox();
+            button1 = new Button();
+            label5 = new Label();
             tabPage1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             Enums.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(groupBox3);
             tabPage1.Controls.Add(groupBox2);
             tabPage1.Controls.Add(groupBox1);
             tabPage1.Location = new Point(4, 29);
@@ -69,9 +75,10 @@ namespace LabTwoOfSecondSession
             groupBox2.Controls.Add(btnParse);
             groupBox2.Controls.Add(textBoxForWeek);
             groupBox2.Controls.Add(label4);
-            groupBox2.Location = new Point(3, 392);
+            groupBox2.Dock = DockStyle.Left;
+            groupBox2.Location = new Point(3, 386);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(574, 196);
+            groupBox2.Size = new Size(439, 207);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Weekday Parsing";
@@ -89,9 +96,9 @@ namespace LabTwoOfSecondSession
             // 
             // btnParse
             // 
-            btnParse.Location = new Point(374, 79);
+            btnParse.Location = new Point(308, 79);
             btnParse.Name = "btnParse";
-            btnParse.Size = new Size(131, 34);
+            btnParse.Size = new Size(118, 28);
             btnParse.TabIndex = 8;
             btnParse.Text = "Parse";
             btnParse.UseVisualStyleBackColor = true;
@@ -102,7 +109,7 @@ namespace LabTwoOfSecondSession
             textBoxForWeek.Location = new Point(16, 79);
             textBoxForWeek.Multiline = true;
             textBoxForWeek.Name = "textBoxForWeek";
-            textBoxForWeek.Size = new Size(323, 34);
+            textBoxForWeek.Size = new Size(286, 28);
             textBoxForWeek.TabIndex = 7;
             // 
             // label4
@@ -193,6 +200,45 @@ namespace LabTwoOfSecondSession
             Enums.Size = new Size(872, 629);
             Enums.TabIndex = 0;
             // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(label5);
+            groupBox3.Controls.Add(button1);
+            groupBox3.Controls.Add(comboBox1);
+            groupBox3.Dock = DockStyle.Right;
+            groupBox3.Location = new Point(448, 386);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(413, 207);
+            groupBox3.TabIndex = 5;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "groupBox3";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(20, 79);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(206, 28);
+            comboBox1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(232, 78);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 28);
+            button1.TabIndex = 1;
+            button1.Text = "Go!";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(19, 39);
+            label5.Name = "label5";
+            label5.Size = new Size(109, 20);
+            label5.TabIndex = 2;
+            label5.Text = "Choose Season";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -208,6 +254,8 @@ namespace LabTwoOfSecondSession
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             Enums.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -227,5 +275,9 @@ namespace LabTwoOfSecondSession
         private Button btnParse;
         private TextBox textBoxForWeek;
         private Label label4;
+        private GroupBox groupBox3;
+        private Label label5;
+        private Button button1;
+        private ComboBox comboBox1;
     }
 }
