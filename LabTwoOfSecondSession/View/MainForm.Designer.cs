@@ -108,6 +108,7 @@ namespace LabTwoOfSecondSession
             seasonComboBox.Name = "seasonComboBox";
             seasonComboBox.Size = new Size(206, 28);
             seasonComboBox.TabIndex = 0;
+            seasonComboBox.SelectedIndexChanged += ComboBox_change;
             // 
             // groupBox2
             // 
@@ -266,7 +267,6 @@ namespace LabTwoOfSecondSession
         private TextBox intValueReturn;
         private ListBox ValuesListBox;
         private ListBox EnumsListBox;
-        private TabControl Enums;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private Label label3;
@@ -280,5 +280,6 @@ namespace LabTwoOfSecondSession
         private Label label5;
         private Button goButton;
         private ComboBox seasonComboBox;
+        protected internal TabControl Enums;
     }
 }

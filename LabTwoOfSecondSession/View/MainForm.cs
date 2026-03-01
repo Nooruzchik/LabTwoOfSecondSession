@@ -105,26 +105,31 @@ namespace LabTwoOfSecondSession
 
             switch (selectedSeason)
             {
-                case Season.winter: 
-                    this.BackColor = Color.FromArgb(80, 152, 215);
+                case Season.winter:
+                    tabPage1.BackColor = Color.FromArgb(80, 152, 215);
                     MessageBox.Show("Бррр! Холодно!", "Время года", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     break;
                 case Season.spring:
-                    this.BackColor = Color.FromArgb(85, 156, 69); 
+                    tabPage1.BackColor = Color.FromArgb(85, 156, 69);
                     break;
                 case Season.summer:
-                    this.BackColor = Color.FromArgb(236, 228, 61);
+                    tabPage1.BackColor = Color.FromArgb(236, 228, 61);
                     MessageBox.Show("Ура! Каникулы!", "Время года", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
-                
-                case Season.autumn:                      
-                    this.BackColor = Color.FromArgb(226,156, 59);
+
+                case Season.autumn:
+                    tabPage1.BackColor = Color.FromArgb(226, 156, 59);
                     MessageBox.Show("Пора батрачить в универе", "Время года", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 default:
                     MessageBox.Show("Что-то пошло не так");
                     break;
             }
+        }
+
+        private void ComboBox_change(object sender, EventArgs e)
+        {
+            tabPage1.BackColor = Color.White;
         }
     }
 }
