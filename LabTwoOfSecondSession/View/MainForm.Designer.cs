@@ -80,7 +80,7 @@ namespace LabTwoOfSecondSession
             groupBox3.Size = new Size(413, 207);
             groupBox3.TabIndex = 5;
             groupBox3.TabStop = false;
-            groupBox3.Text = "groupBox3";
+            groupBox3.Text = "Season Handle";
             // 
             // label5
             // 
