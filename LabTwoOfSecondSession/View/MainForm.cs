@@ -12,9 +12,6 @@ namespace LabTwoOfSecondSession
             this.Load += MainForm_Load;
 
             seasonComboBox.DataSource = Enum.GetValues(typeof(Season)); // выводит значания Season в comboBox
-
-
-
         }
         /// <summary>
         /// выводит все наши перечисления в EnumsListBox
@@ -98,7 +95,9 @@ namespace LabTwoOfSecondSession
                 replaceToInt.Text = "Нет такого дня недели";
             }
         }
-
+        /// <summary>
+        ///  функция для покраски формы
+        /// </summary>
         private void goButton_click(object sender, EventArgs e)
         {
             Season selectedSeason = (Season)seasonComboBox.SelectedItem;
